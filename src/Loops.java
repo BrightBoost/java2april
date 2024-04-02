@@ -21,7 +21,42 @@ public class Loops {
         }
 
         // do while
+        do {
+            System.out.println("wordt altijd tenminste 1x uitgevoerd");
+        } while(!isAan);
 
+        String[] vogels = { "pluto", "mentos" };
         // for each
+        for(String name : vogels) {
+            System.out.println(name);
+        }
+
+        for(int i = 0; i < vogels.length; i++) {
+            System.out.println(vogels[i]);
+
+            if(vogels[i].equals("pluto")) {
+                break;
+            }
+        }
+
+        // zonder break
+        boolean birdFound = false;
+        int i = 0;
+        while(!birdFound) {
+            System.out.println(vogels[i]);
+            if(vogels[i].equals("pluto")) {
+                birdFound = true;
+            }
+            i++;
+        }
+
+        // zonder break met for loop
+        boolean birdFound2 = false;
+        for(int j = 0; j < vogels.length && !birdFound2; j++) {
+            System.out.println(vogels[j]);
+            if(vogels[j].equals("pluto")) {
+                birdFound2 = true;
+            }
+        }
     }
 }
